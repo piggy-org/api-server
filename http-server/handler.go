@@ -25,5 +25,5 @@ type Response struct {
 }
 
 const (
-	defaultPort = ":80"
+	defaultPort = ":8080"
 )

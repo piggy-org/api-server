@@ -14,7 +14,7 @@ type GinServer struct {
 func NewGinServer() Server {
 	engine := gin.New()
 	server := &GinServer{
-		engine: gin.New(),
+		engine: engine,
 	}
 	engine.GET(healthPath, server.health)
 	return server
