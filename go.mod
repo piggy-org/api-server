@@ -1,4 +1,4 @@
-module github.com/Vincent18zt/piggy-market-backend
+module github.com/piggy-org/api-server
 
 go 1.20
 

@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/Vincent18zt/piggy-market-backend/http-server"
-)
+import "github.com/piggy-org/api-server/http-server"
 
 func main() {
 	// start a gin http-server
