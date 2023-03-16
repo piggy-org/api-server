@@ -1,4 +1,4 @@
-package http_server
+package server
 
 import (
 	"github.com/gin-gonic/gin"
@@ -10,7 +10,7 @@ type GinServer struct {
 	engine *gin.Engine
 }
 
-// NewGinServer create a gin http http-server
+// NewGinServer create a gin http server
 func NewGinServer() Server {
 	engine := gin.New()
 	server := &GinServer{
@@ -20,16 +20,16 @@ func NewGinServer() Server {
 	return server
 }
 
-// Run a gin http-server
+// Run a gin server
 func (h *GinServer) Run() error {
 	err := h.engine.Run(defaultPort)
 	return err
 }
 
-// Stop a gin http-server
+// Stop a gin server
 func (h *GinServer) Stop() error { return nil }
 
-// health is a handler for gin http-server health check
+// health is a handler for gin server health check
 func (h *GinServer) health(c *gin.Context) {
 	c.IndentedJSON(http.StatusOK, Response{
 		Code: ok,
